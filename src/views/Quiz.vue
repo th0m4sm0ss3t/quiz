@@ -1,17 +1,17 @@
 <template>
-  <div class="home">
-    <TheHome />
+  <div class="quiz">
+    <OneQuiz />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import TheHome from '@/components/TheHome.vue';
+import OneQuiz from '@/components/OneQuiz.vue';
 
 export default {
-  name: 'Home',
+  name: 'Quiz',
   components: {
-    TheHome,
+    OneQuiz,
   },
 };
 </script>
