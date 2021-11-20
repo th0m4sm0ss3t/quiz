@@ -14,4 +14,11 @@ export default createStore({
   },
   modules: {
   },
+  getters: {
+    // Filter to find only the last quiz of the quizList array
+    latestQuiz:
+    (state) => (quizListLength) => state.quizList.find(
+      (quiz) => quiz.id === quizListLength,
+    ),
+  },
 });

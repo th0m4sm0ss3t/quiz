@@ -49,6 +49,15 @@
       </button>
     </form>
     <p>{{ message }}</p>
+    <iframe
+      v-if="gif != ''"
+      :src="gif"
+      width="480"
+      height="270"
+      frameBorder="0"
+      class="giphy-embed"
+      allowFullScreen
+    ></iframe>
   </div>
 </template>
 
@@ -65,10 +74,11 @@ export default {
       routerSlug: this.$route.params.slug,
       playerAnswers: [],
       message: '',
+      gif: '',
     };
   },
   computed: {
-    ...mapState(['quizList', 'chosenResponse1', 'chosenResponse2']),
+    ...mapState(['quizList']),
     quiz() {
       return this.quizList.find(
         (quiz) => quiz.slug === this.routerSlug,
@@ -101,18 +111,30 @@ export default {
           // If correct answer, add 1 to the score
           if (correctAnswer === playerAnswer) {
             score += 1;
-            // console.log('correctAnswer ->', correctAnswer);
-            // console.log('playerAnswer ->', playerAnswer);
           }
         });
       });
 
-      if (score <= 1) {
-        this.message = `You have answered correctly to ${score} question !`;
+      // If all answers are correct
+      if (score === questionsListArray.length) {
+        this.message = '100% correct !';
+        this.gif = 'https://giphy.com/embed/g9582DNuQppxC';
+
         return this.message;
       }
 
-      this.message = `You have answered correctly to ${score} questions !`;
+      // If all answers are incorrect
+      if (score === 0) {
+        this.message = `${score} correct answer out of the ${questionsListArray.length} questions.`;
+        this.gif = 'https://giphy.com/embed/9oF7EAvaFUOEU';
+
+        return this.message;
+      }
+
+      // If answers are partially correct (ex: 3 out of 5)
+      this.gif = 'https://giphy.com/embed/n5VaQoW39Z9S0';
+      this.message = `${score} correct answer out of the ${questionsListArray.length} questions.`;
+
       return this.message;
     },
     checkIfRadioBtnIsSelected(responseTitle) {
@@ -124,6 +146,7 @@ export default {
     },
     tryQuizAgain() {
       this.message = '';
+      this.gif = '';
       this.playerAnswers = [];
 
       const allRadiosBtn = document.getElementsByTagName('input');
@@ -157,5 +180,9 @@ export default {
     font-weight: bold;
     margin-bottom: 0.7rem;
   }
+}
+
+.giphy-embed {
+  margin-bottom: 5rem;
 }
 </style>

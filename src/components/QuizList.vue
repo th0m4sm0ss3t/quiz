@@ -12,19 +12,9 @@
                   :to="{
                     name: 'Quiz', params: { slug: quiz.slug }
                   }"
-                  v-if="quiz.result === ''"
                   class="btn btn-success"
                 >
                   Start the quiz
-                </router-link>
-                <router-link
-                  :to="{
-                    name: 'Quiz', params: { slug: quiz.slug }
-                  }"
-                  v-else
-                  class="btn btn-success"
-                >
-                  I want to better my score !
                 </router-link>
             </div>
           </div>
@@ -50,28 +40,44 @@ export default {
 
 <style scoped lang="scss">
 @import '@/css/vars.scss';
+.quizList {
+  width: 80%;
+  margin: 5rem auto;
+}
 
 .title {
   font-family: $titleFont;
   text-transform: uppercase;
   color: $color;
 }
-
 .list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   margin: 5rem 1rem;
 }
-
 .list li {
   list-style: none;
 }
-
 .card-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 15rem;
+}
+
+/* Small screen */
+@media only screen and (max-width: 800px) {
+  .list {
+    justify-content: center;
+  }
+}
+
+/* Medium screen */
+@media only screen and (min-width: 801px) {
+  .list {
+    justify-content: center;
+  }
 }
 
 </style>
