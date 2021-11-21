@@ -88,7 +88,6 @@ export default {
   methods: {
     playerAnswersForm(event) {
       event.preventDefault();
-      // console.log('playerAnswers');
       return this.checkCorrectAnswer();
     },
     checkCorrectAnswer() {

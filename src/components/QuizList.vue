@@ -4,20 +4,24 @@
     <section class="list">
       <ul v-for="quiz in quizList" :key="quiz.id" class="card-deck">
         <li>
-          <div class="card border-dark" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">{{ quiz.title }}</h5>
-              <p class="card-text">{{ quiz.description }}</p>
-                <router-link
-                  :to="{
-                    name: 'Quiz', params: { slug: quiz.slug }
-                  }"
-                  class="btn btn-success"
-                >
-                  Start the quiz
-                </router-link>
-            </div>
-          </div>
+          <kinesis-container>
+            <kinesis-element :strength="8" type="depth">
+              <div class="card border-dark" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{ quiz.title }}</h5>
+                  <p class="card-text">{{ quiz.description }}</p>
+                    <router-link
+                      :to="{
+                        name: 'Quiz', params: { slug: quiz.slug }
+                      }"
+                      class="btn btn-success"
+                    >
+                      Start the quiz
+                    </router-link>
+                </div>
+              </div>
+            </kinesis-element>
+          </kinesis-container>
         </li>
       </ul>
     </section>
