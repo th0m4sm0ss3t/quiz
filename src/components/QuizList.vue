@@ -49,20 +49,27 @@ export default {
   margin: 5rem auto;
 }
 
+.card-deck {
+  padding: 0;
+}
+
 .title {
   font-family: $titleFont;
   text-transform: uppercase;
   color: $color;
 }
+
 .list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 5rem 1rem;
 }
+
 .list li {
   list-style: none;
 }
+
 .card-body {
   display: flex;
   flex-direction: column;
@@ -81,6 +88,17 @@ export default {
 @media only screen and (min-width: 801px) {
   .list {
     justify-content: center;
+  }
+
+  .card {
+    margin: 0 0.5rem;
+  }
+}
+
+/* Big screen */
+@media only screen and (min-width: 1500px) {
+  .card {
+    margin: 0 0.5rem;
   }
 }
 

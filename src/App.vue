@@ -6,6 +6,7 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/quiz">Our quiz</router-link> |
+      <router-link to="/search">Search for a quiz</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
