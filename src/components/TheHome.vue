@@ -36,6 +36,8 @@ export default {
   name: 'Home',
   created() {
     document.title = 'Home';
+    // Emptying the array of results for search bar
+    this.$store.state.searchResults = [];
   },
   data() {
     return {};

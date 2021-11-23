@@ -67,6 +67,11 @@ import { mapState, mapGetters } from 'vuex';
 
 export default {
   name: 'SearchBar',
+  created() {
+    if (this.routerSlug === 'search') {
+      this.$store.state.searchResults = [];
+    }
+  },
   data() {
     return {
       errorMsg: '',

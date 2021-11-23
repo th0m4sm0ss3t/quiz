@@ -396,6 +396,7 @@ const quizList = [
         correctAnswer: 'Cary Agos',
       },
     ],
+    vote: 0,
   },
   {
     id: 2,
@@ -500,6 +501,7 @@ const quizList = [
         correctAnswer: 'Jay Dipersia',
       },
     ],
+    vote: 0,
   },
   {
     id: 3,
@@ -699,6 +701,7 @@ const quizList = [
         correctAnswer: 'Danny Elfman',
       },
     ],
+    vote: 0,
   },
   {
     id: 4,
@@ -917,6 +920,7 @@ const quizList = [
         correctAnswer: 'Poussey\'s death',
       },
     ],
+    vote: 0,
   },
   {
     id: 5,
@@ -1116,6 +1120,7 @@ const quizList = [
         correctAnswer: 'Lady Mary',
       },
     ],
+    vote: 0,
   },
   {
     id: 6,
@@ -1296,6 +1301,7 @@ const quizList = [
         correctAnswer: 'D\'oh!',
       },
     ],
+    vote: 0,
   },
   {
     id: 7,
@@ -1419,6 +1425,7 @@ const quizList = [
         correctAnswer: 'Injun Joe',
       },
     ],
+    vote: 0,
   },
   {
     id: 8,
@@ -1618,6 +1625,7 @@ const quizList = [
         correctAnswer: 'In Alaska',
       },
     ],
+    vote: 0,
   },
   {
     id: 9,
@@ -1817,6 +1825,7 @@ const quizList = [
         correctAnswer: '"Starchild"',
       },
     ],
+    vote: 0,
   },
 ];
 

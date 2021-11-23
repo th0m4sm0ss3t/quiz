@@ -35,6 +35,8 @@ export default {
   name: 'quizList',
   created() {
     document.title = 'Quiz list';
+    // Emptying the array of results for search bar
+    this.$store.state.searchResults = [];
   },
   computed: {
     ...mapState(['quizList']),
