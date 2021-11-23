@@ -233,6 +233,15 @@ export default {
   }
 }
 
+input {
+  border: $color 1px solid;
+}
+
+input:checked {
+  background: $color;
+  border: $main 1px solid;
+}
+
 .giphy-embed {
   margin-bottom: 5rem;
 }
