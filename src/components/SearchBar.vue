@@ -68,9 +68,7 @@ import { mapState, mapGetters } from 'vuex';
 export default {
   name: 'SearchBar',
   created() {
-    if (this.routerSlug === 'search') {
-      this.$store.state.searchResults = [];
-    }
+    document.title = 'Search for a quiz';
   },
   data() {
     return {

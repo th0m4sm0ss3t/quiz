@@ -197,6 +197,7 @@ const quizList = [
         correctAnswer: 'Cigarette Smoking Man',
       },
     ],
+    vote: 8,
   },
   {
     id: 1,
@@ -396,7 +397,7 @@ const quizList = [
         correctAnswer: 'Cary Agos',
       },
     ],
-    vote: 0,
+    vote: 1,
   },
   {
     id: 2,
@@ -1120,7 +1121,7 @@ const quizList = [
         correctAnswer: 'Lady Mary',
       },
     ],
-    vote: 0,
+    vote: 4,
   },
   {
     id: 6,
@@ -1625,7 +1626,7 @@ const quizList = [
         correctAnswer: 'In Alaska',
       },
     ],
-    vote: 0,
+    vote: 3,
   },
   {
     id: 9,
